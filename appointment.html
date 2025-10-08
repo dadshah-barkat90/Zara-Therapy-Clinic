@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Make an Appointment - Zara Therapy Clinic</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="CSS/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/physical-therapy-logo.png" alt="">
+      <h1>Zara <span>Therapy Clinic</span></h1>
+      <p class="tagline">Healing Hands, Caring Hearts</p>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="therapists.html">Therapists</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- APPOINTMENT SECTION -->
+  <section class="appointment-section">
+    <div class="appointment-wrap">
+      <div class="appointment-header">
+        <h2><i class="fa-solid fa-calendar-check"></i> Book an Appointment</h2>
+        <p class="sub-text">Choose your service and preferred doctor, pick a date & time — we’ll confirm right away.</p>
+      </div>
+
+      <div class="appointment-card">
+        <form id="appointmentForm" novalidate>
+          <div style="display:flex; gap:18px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:240px;">
+              <label for="service" class="form-label"><i class="fa-solid fa-stethoscope"></i> Select Service</label>
+              <select id="service" required>
+                <option value="">-- Choose a Service --</option>
+                <option value="Physical Therapy">Physical Therapy</option>
+                <option value="Occupational Therapy">Occupational Therapy</option>
+                <option value="Speech Therapy">Speech Therapy</option>/
+                <option value="Massage Therapy">Massage Therapy</option>
+                <option value="Rehabilitation">Rehabilitation</option>
+              </select>
+            </div>
+
+            <div style="flex:1; min-width:240px;">
+              <label for="doctor" class="form-label"><i class="fa-solid fa-user-doctor"></i> Select Doctor</label>
+              <select id="doctor" required>
+                <option value="">-- Choose a Doctor --</option>
+                <option value="Dr. Sarah Johnson">Dr. Sara Malik</option>
+                <option value="Dr. Ali Khan">Dr. Ali Khan</option>
+                <option value="Dr. Emily Carter">Dr. Ahmed Ali</option>
+                <option value="Dr. James Smith">Dr. Bilal Hussain</option>
+                <option value="Dr. Maria Lopez">Dr. Hina Farooq</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:18px; flex-wrap:wrap; margin-top:14px;">
+            <div style="flex:1; min-width:240px;">
+              <label for="name" class="form-label"><i class="fa-solid fa-user"></i> Your Name</label>
+              <input type="text" id="name" placeholder="Full name" required>
+            </div>
+
+            <div style="flex:1; min-width:240px;">
+              <label for="email" class="form-label"><i class="fa-solid fa-envelope"></i> Your Email</label>
+              <input type="email" id="email" placeholder="email@example.com" required>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:18px; flex-wrap:wrap; margin-top:14px;">
+            <div style="flex:1; min-width:240px;">
+              <label for="date" class="form-label"><i class="fa-solid fa-calendar-day"></i> Appointment Date</label>
+              <input type="date" id="date" required>
+            </div>
+
+            <div style="flex:1; min-width:240px;">
+              <label for="time" class="form-label"><i class="fa-solid fa-clock"></i> Appointment Time</label>
+              <input type="time" id="time" required>
+            </div>
+          </div>
+
+          <div style="margin-top:18px; text-align:center;">
+            <button type="submit" class="btn-submit">Make Appointment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow-lg border-0">
+
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="appointmentModalLabel"><i class="fa-solid fa-circle-check"></i> Appointment Confirmed 🎉</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body text-center">
+          <p class="fs-5">Your appointment has been booked successfully!</p>
+
+          <div class="detail-box p-3 bg-light rounded mt-3 text-start mx-2">
+            <p><strong><i class="fa-solid fa-user-doctor"></i> Doctor:</strong> <span id="modalDoctor">—</span></p>
+            <p><strong><i class="fa-solid fa-stethoscope"></i> Service:</strong> <span id="modalService">—</span></p>
+            <p><strong><i class="fa-solid fa-calendar-days"></i> Date & Time:</strong> <span id="modalDateTime">—</span></p>
+          </div>
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="contact.html" class="btn btn-success">Contact Clinic</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer  -->
+  <footer class="site-footer" style="margin-top:40px;">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Zara Therapy Clinic</h3>
+        <p>Healing with compassion, restoring with care. We’re here to make your journey smoother.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="therapists.html">Therapists</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> info@zaratherapy.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <a href="contact.html" class="footer-btn">Book a Session</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Zara Therapy Clinic. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="JS/bootstrap.bundle.js"></script>
+
+  <!-- Appointment script (robust: uses Bootstrap modal if available, fallback if not) -->
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('appointmentForm');
+  const modalDoctor = document.getElementById('modalDoctor');
+  const modalService = document.getElementById('modalService');
+  const modalDateTime = document.getElementById('modalDateTime');
+  const modalEl = document.getElementById('appointmentModal');
+
+  if (!form) return;
+
+  // Helper: format date/time
+  function formatDateTime(date, time) {
+    if (!date) return time || '';
+    try {
+      const d = new Date(date + 'T' + (time || '00:00'));
+      if (isNaN(d)) return date + (time ? ' at ' + time : '');
+      const opts = { year: 'numeric', month: 'short', day: 'numeric' };
+      const dateStr = d.toLocaleDateString(undefined, opts);
+      const timeStr = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      return dateStr + ' at ' + timeStr;
+    } catch {
+      return date + (time ? ' at ' + time : '');
+    }
+  }
+
+  // Show error under field
+  function showError(input, message) {
+    let error = input.parentElement.querySelector('.error-message');
+    if (!error) {
+      error = document.createElement('small');
+      error.className = 'error-message';
+      error.style.color = 'red';
+      error.style.display = 'block';
+      input.parentElement.appendChild(error);
+    }
+    error.textContent = message;
+    input.classList.add('is-invalid'); // Bootstrap style if you like
+  }
+
+  // Clear error
+  function clearError(input) {
+    let error = input.parentElement.querySelector('.error-message');
+    if (error) error.textContent = '';
+    input.classList.remove('is-invalid');
+  }
+
+  // Validate inputs
+  function validate() {
+    let valid = true;
+
+    const service = document.getElementById('service');
+    const doctor = document.getElementById('doctor');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const date = document.getElementById('date');
+    const time = document.getElementById('time');
+
+    if (!service.value.trim()) {
+      showError(service, 'Please select a service.');
+      valid = false;
+    } else clearError(service);
+
+    if (!doctor.value.trim()) {
+      showError(doctor, 'Please select a doctor.');
+      valid = false;
+    } else clearError(doctor);
+
+    if (!name.value.trim()) {
+      showError(name, 'Please enter your name.');
+      valid = false;
+    } else clearError(name);
+
+    if (!email.value.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)) {
+      showError(email, 'Please enter a valid email.');
+      valid = false;
+    } else clearError(email);
+
+    if (!date.value.trim()) {
+      showError(date, 'Please select a date.');
+      valid = false;
+    } else clearError(date);
+
+    if (!time.value.trim()) {
+      showError(time, 'Please select a time.');
+      valid = false;
+    } else clearError(time);
+
+    return valid;
+  }
+
+  // Submit handler
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    if (!validate()) return; // stop if invalid
+
+    const service = document.getElementById('service').value.trim();
+    const doctor = document.getElementById('doctor').value.trim();
+    const date = document.getElementById('date').value.trim();
+    const time = document.getElementById('time').value.trim();
+
+    const formatted = formatDateTime(date, time);
+
+    modalDoctor.textContent = doctor;
+    modalService.textContent = service;
+    modalDateTime.textContent = formatted;
+
+    if (window.bootstrap && typeof window.bootstrap.Modal === 'function' && modalEl) {
+      const bsModal = new bootstrap.Modal(modalEl, { keyboard: true });
+      bsModal.show();
+    } else {
+      alert('Appointment booked:\nDoctor: ' + doctor + '\nService: ' + service + '\n' + formatted);
+    }
+
+    setTimeout(() => form.reset(), 200);
+  });
+});
+
+// Mobile menu
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  if (navLinks) navLinks.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

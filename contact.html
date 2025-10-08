@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Therapy Clinic</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="CSS/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <div class="logo">
+    <img src="images/physical-therapy-logo.png" alt="Therapy Logo">
+    <h1>Zara <span>Therapy Clinic</span></h1>
+    <p class="tagline">Healing • Care • Wellness</p>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links">
+    <li><a href="Index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="therapists.html">Therapists</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="offers.html">Offers</a></li>
+    <li><a href="appointment.html">Appointment</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out for appointments, questions, or feedback.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container contact-container">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+        <p><i class="fa-solid fa-envelope"></i> info@therapyclinic.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> Main Road, Karachi, Pakistan</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+        </div>
+        <button onclick="showDirections()" class="btn-direction">Get Directions</button>
+
+      </div>
+  
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <input type="number" id="phone" placeholder="Your Phone" required>
+          <input type="text" id="subject" placeholder="Subject" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn-submit">Send Message</button>
+          <p id="formMessage"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <section class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3050707404826!2d67.0011!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDUxJzM4LjUiTiA2N8KwMDAnMDMuOSJF!5e0!3m2!1sen!2s!4v1674659943213!5m2!1sen!2s" 
+      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- ===== Footer Section ===== -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Clinic Info -->
+    <div class="footer-about">
+      <h3>Zara Therapy Clinic</h3>
+      <p>Healing with care, compassion, and modern techniques.  
+         Your journey to wellness starts with us.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Therapists</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-links">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#">Physiotherapy</a></li>
+        <li><a href="#">Massage Therapy</a></li>
+        <li><a href="#">Rehabilitation</a></li>
+        <li><a href="#">Pain Management</a></li>
+        <li><a href="#">Wellness Programs</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+      <p><i class="fas fa-phone-alt"></i> +92 300 1234567</p>
+      <p><i class="fas fa-envelope"></i> info@zaratherapy.com</p>
+      <a href="appointment.html" class="footer-btn">Book a Session</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Zara Therapy Clinic | All Rights Reserved</p>
+  </div>
+</footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>

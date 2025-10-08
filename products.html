@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products - Zara Therapy Clinic</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="CSS/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="images/physical-therapy-logo.png" alt="Logo">
+      <h1>Zara <span>Therapy</span> Clinic</h1>
+      <div class="tagline">Healing with Care</div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="therapists.html">Therapists</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="products-hero">
+    <div class="hero-overlay">
+      <h1>Our Products</h1>
+      <p>Quality therapeutic products for healing, comfort, and well-being.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+      <p class="section-subtitle">Carefully selected to support your therapy and recovery journey.</p>
+
+      <div class="products-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="images/bath_massage_oil_1.png" alt="Product 1">
+          <div class="product-info">
+            <h3>Therapy Massage Oil</h3>
+            <p>Natural oil blend for relaxation and pain relief.</p>
+            <span class="price">$15</span>
+            <button class="buy-btn" data-bs-toggle="modal" data-bs-target="#successModal1">
+              <i class="fas fa-shopping-cart"></i> Buy Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="images/Posture Corrector.jpg" alt="Product 2">
+          <div class="product-info">
+            <h3>Posture Corrector</h3>
+            <p>Lightweight and comfortable posture support.</p>
+            <span class="price">$25</span>
+            <button class="buy-btn" data-bs-toggle="modal" data-bs-target="#successModal2">
+              <i class="fas fa-shopping-cart"></i> Buy Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="images/Knee Support Brace.jpg" alt="Product 3">
+          <div class="product-info">
+            <h3>Knee Support Brace</h3>
+            <p>Provides stability and support during recovery.</p>
+            <span class="price">$30</span>
+            <button class="buy-btn" data-bs-toggle="modal" data-bs-target="#successModal3">
+              <i class="fas fa-shopping-cart"></i> Buy Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="images/Hot & Cold Pack.webp" alt="Product 4">
+          <div class="product-info">
+            <h3>Hot & Cold Pack</h3>
+            <p>Reusable therapy pack for injuries and pain relief.</p>
+            <span class="price">$10</span>
+            <button class="buy-btn" data-bs-toggle="modal" data-bs-target="#successModal4">
+              <i class="fas fa-shopping-cart"></i> Buy Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+          <img src="images/Resistance Bands.webp" alt="Product 5">
+          <div class="product-info">
+            <h3>Resistance Bands</h3>
+            <p>Perfect for physiotherapy and strength exercises.</p>
+            <span class="price">$20</span>
+            <button class="buy-btn" data-bs-toggle="modal" data-bs-target="#successModal5">
+              <i class="fas fa-shopping-cart"></i> Buy Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="images/Therapy Ball.webp" alt="Product 6">
+          <div class="product-info">
+            <h3>Therapy Ball</h3>
+            <p>Helps with mobility, stretching, and muscle relief.</p>
+            <span class="price">$18</span>
+            <button class="buy-btn" data-bs-toggle="modal" data-bs-target="#successModal6">
+              <i class="fas fa-shopping-cart"></i> Buy Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modals for All 6 Products -->
+  <div class="modal fade modal-success" id="successModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"></div>
+        <div class="modal-body">
+          <i class="fas fa-check-circle check-icon"></i>
+          <h4>Purchase Successful!</h4>
+          <p>You have bought <strong>Therapy Massage Oil</strong> successfully.</p>
+          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-success" id="successModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <i class="fas fa-check-circle check-icon"></i>
+          <h4>Purchase Successful!</h4>
+          <p>You have bought <strong>Posture Corrector</strong> successfully.</p>
+          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-success" id="successModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <i class="fas fa-check-circle check-icon"></i>
+          <h4>Purchase Successful!</h4>
+          <p>You have bought <strong>Knee Support Brace</strong> successfully.</p>
+          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-success" id="successModal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <i class="fas fa-check-circle check-icon"></i>
+          <h4>Purchase Successful!</h4>
+          <p>You have bought <strong>Hot & Cold Pack</strong> successfully.</p>
+          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-success" id="successModal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <i class="fas fa-check-circle check-icon"></i>
+          <h4>Purchase Successful!</h4>
+          <p>You have bought <strong>Resistance Bands</strong> successfully.</p>
+          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-success" id="successModal6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <i class="fas fa-check-circle check-icon"></i>
+          <h4>Purchase Successful!</h4>
+          <p>You have bought <strong>Therapy Ball</strong> successfully.</p>
+          <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Zara Therapy Clinic</h3>
+        <p>Healing with care, compassion, and modern techniques. Your journey to wellness starts with us.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="therapists.html">Therapists</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <p><i class="fas fa-phone-alt"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> info@zaratherapy.com</p>
+        <a href="appointment.html" class="footer-btn">Book a Session</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Zara Therapy Clinic | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="JS/script.js"></script>
+</body>
+</html>

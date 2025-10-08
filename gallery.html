@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Zara Therapy Clinic</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="CSS/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="images/physical-therapy-logo.png" alt="Logo">
+      <h1>Zara <span>Therapy</span> Clinic</h1>
+      <div class="tagline">Healing with Care</div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="therapists.html">Therapists</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="gallery-hero">
+    <div class="hero-overlay">
+      <h1>Our Gallery</h1>
+      <p>Explore moments from our therapy sessions, events, and healing environment.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="container">
+      <h2 class="section-title">Memorable Moments</h2>
+      <p class="section-subtitle">Healing, care, and inspiration captured in frames.</p>
+
+      <!-- Filter Buttons -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+        <button class="filter-btn" onclick="filterGallery('therapy')">Therapy</button>
+        <button class="filter-btn" onclick="filterGallery('clinic')">Clinic</button>
+        <button class="filter-btn" onclick="filterGallery('events')">Events</button>
+        <button class="filter-btn" onclick="filterGallery('patients')">Patients</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item therapy">
+          <img src="images/Therapy Session.webp" alt="Therapy Session" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item clinic">
+          <img src="images/Clinic Interior.webp" alt="Clinic Interior" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item events">
+          <img src="images/Event2.jpeg" alt="Event" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item patients">
+          <img src="images/Happy Patient.webp" alt="Happy Patient" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item therapy">
+          <img src="images/Massage Therapy.jpg" alt="Massage Therapy" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item clinic">
+          <img src="images/Reception.jpg" alt="Reception" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item events">
+          <img src="images/Workshop.jpg" alt="Workshop" onclick="openLightbox(this)">
+        </div>
+        <div class="gallery-item patients">
+          <img src="images/Patient Session.jpg" alt="Patient Session" onclick="openLightbox(this)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded">
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Zara Therapy Clinic</h3>
+        <p>Healing with care, compassion, and modern techniques. Your journey to wellness starts with us.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="therapists.html">Therapists</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <p><i class="fas fa-phone-alt"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> info@zaratherapy.com</p>
+        <a href="appointment.html" class="footer-btn">Book a Session</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Zara Therapy Clinic | All Rights Reserved</p>
+    </div>
+  </footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>

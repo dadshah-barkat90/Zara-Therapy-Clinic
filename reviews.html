@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - Zara Therapy Clinic</title>
+ <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="CSS/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="images/physical-therapy-logo.png" alt="Logo">
+      <h1>Zara <span>Therapy</span> Clinic</h1>
+      <div class="tagline">Healing with Care</div>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="therapists.html">Therapists</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="reviews-hero">
+    <div class="hero-overlay">
+      <h1>Client Reviews</h1>
+      <p>See what our clients say about their healing journey with us.</p>
+    </div>
+  </section>
+
+  <!-- Review Summary -->
+  <section class="review-summary">
+    <h2>Overall Rating</h2>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+    <p class="rating-text">4.5 out of 5 (based on 120+ reviews)</p>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="reviews-section">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="reviews-grid">
+        <!-- Review Card -->
+        <div class="review-card">
+          <img src="images/client1.webp" alt="Client">
+          <h3>Ali Khan</h3>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"Amazing experience! The therapists are very professional and caring. Highly recommended!"</p>
+        </div>
+
+        <div class="review-card">
+          <img src="images/client2.jpeg" alt="Client">
+          <h3>Sarah Ahmed</h3>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>"The environment is so relaxing and the therapy really helped me recover quickly."</p>
+        </div>
+
+        <div class="review-card">
+          <img src="images/client3.avif" alt="Client">
+          <h3>John Doe</h3>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>"Good service and caring staff. I will definitely come again for my next sessions."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add Review Form -->
+  <section class="add-review">
+    <div class="container">
+      <h2 class="section-title">Leave a Review</h2>
+      <form class="review-form" onsubmit="showAlert(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Zara Therapy Clinic</h3>
+        <p>Healing with care, compassion, and modern techniques. Your journey to wellness starts with us.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="therapists.html">Therapists</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <p><i class="fas fa-phone-alt"></i> +92 300 1234567</p>
+        <p><i class="fas fa-envelope"></i> info@zaratherapy.com</p>
+        <a href="appointment.html" class="footer-btn">Book a Session</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Zara Therapy Clinic | All Rights Reserved</p>
+    </div>
+  </footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="JS/script.js"></script>
+
+</body>
+</html>
