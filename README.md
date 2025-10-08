@@ -29,8 +29,22 @@ The site also uses local storage and session storage for a better user experienc
 - HTML5  
 - CSS3  
 - JavaScript (ES6)
-
 ---
+Therapy-Clinic-Website/
+│
+├── index.html
+├── about.html
+├── services.html
+├── therapists.html
+├── contact.html
+│
+├── css/
+│ └── style.css
+│
+├── js/
+│ └── script.js
+│
+└── images/
 
 
 ## Folder Structure
